@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, p, span, a, small {
+  font-family: "Gilroy", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  padding: 10px 50px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.header img {
+  width: 200px;
+}
+.header .nav-links, .header .nav-links a {
+  display: flex;
+  align-items: center;
+}
+.header .nav-links {
+  gap: 56px;
+}
+.header .nav-links a {
+  color: white;
+  text-decoration: none;
+  gap: 10px;
+}
+.header .nav-links img {
+  width: 10px;
+}
+.header .lang-selector {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #000;
+  padding: 0px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .lang-selector span {
+  color: #2C2C2C;
+}
+.header .burger_menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 8px;
+  gap: 5px;
+}
+.header .burger_menu div {
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+  background: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  align-items: flex-end;
+}
+.hero .background-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  padding: 0 60px 60px 60px;
+  width: 100%;
+  justify-content: space-between;
+  color: white;
+}
+.hero-content .text-left {
+  max-width: 50%;
+}
+.hero-content .text-left p {
+  font-size: 1.2rem;
+  padding-bottom: 15px;
+}
+.hero-content .text-left h1 {
+  font-size: 150px;
+  line-height: 100%;
+}
+.hero-content .text-right {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.hero-content .text-right p {
+  font-size: 42px;
+  text-align: right;
+  max-width: 515px;
+}
+.hero-content .text-right p span {
+  color: #FFC711;
+}
+
+.select_btn {
+  background-color: #FFC711;
+  color: #2C2C2C;
+  padding: 12px 62px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  margin-top: 40px;
+  border: none;
+}
+
+.projects-section {
+  background-color: #93CADF;
+  overflow-x: hidden;
+  text-align: center;
+}
+.projects-section .projects-gallery-container {
+  padding-left: 68px;
+}
+.projects-section h2 {
+  color: white;
+  margin-right: 300px;
+  font-size: 220px;
+  margin-bottom: 30px;
+  position: relative;
+  top: 117px;
+  z-index: 5;
+}
+.projects-section .projects-gallery {
+  display: flex;
+  gap: 40px;
+}
+.projects-section .projects-gallery .project-card {
+  position: relative;
+  min-width: 665px;
+  height: 700px;
+}
+.projects-section .projects-gallery .project-card img {
+  display: block;
+  height: 700px;
+  object-fit: cover;
+}
+.projects-section .projects-gallery .project-card .project-info {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 50px;
+  color: white;
+  justify-content: space-between;
+}
+.projects-section .projects-gallery .project-card .project-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.projects-section .projects-gallery .project-card .project-info .project-info_btn {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFC711;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.projects-section .projects-gallery .project-card .project-info .project-info_btn img {
+  width: 24px;
+  height: 24px;
+}
+.projects-section .projects-gallery .project-card .project-info p {
+  font-size: 48px;
+}
+.projects-section .projects-gallery .project-card .project-info small {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.projects-section .carousel-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.projects-section .carousel-controls button {
+  background-color: white;
+  color: #000;
+  padding: 0px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.projects-section .carousel-controls button img {
+  width: 25px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #93CADF;
+  padding: 50px 20px;
+  position: relative;
+}
+.about-section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-section p {
+  max-width: 910px;
+  font-size: 40px;
+  color: #2C2C2C;
+  z-index: 15;
+}
+.about-section p, .about-section span {
+  font-weight: 600;
+  line-height: 40px;
+}
+.about-section h2 {
+  font-size: 140px;
+  color: white;
+  z-index: 15;
+  position: relative;
+  top: 150px;
+}
+.about-section span {
+  color: white;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  top: -100%;
+  position: absolute;
+}
+
+.hero-right-img {
+  position: absolute;
+  right: 0;
+  z-index: 5;
+}
+
+/* MEDIA QUERY */
+@media screen and (max-width: 1400px) {
+  .container .hero-content .text-left h1 {
+    font-size: 100px;
+  }
+  .container .hero-content .text-right p {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container .hero .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .container .hero .hero-content .text-right, .container .hero .hero-content .text-left {
+    width: 100%;
+    max-width: 100%;
+    align-items: flex-start;
+  }
+  .container .hero .hero-content .text-right p, .container .hero .hero-content .text-left p {
+    text-align: left;
+  }
+  .container .navbar {
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .container .navbar .nav-links {
+    gap: 20px;
+  }
+  .lang-selector {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container .header {
+    padding: 30px;
+  }
+  .container .header .burger_menu {
+    display: flex;
+  }
+  .container .header .nav-links a, .container .header .lang-selector {
+    display: none;
+  }
+}
+@media screen and (max-width: 530px) {
+  .container .hero .hero-content {
+    padding: 20px;
+    top: -50px;
+  }
+  .container .hero .hero-content .text-left h1 {
+    font-size: 15vw;
+  }
+  .container .hero .hero-content .text-right p {
+    font-size: 6vw;
+    margin-top: 20px;
+  }
+  .container .header img {
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

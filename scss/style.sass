@@ -1,0 +1,241 @@
+@import "var"
+@import "mixins"
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+h1, h2, p, span, a, small
+  font-family: 'Gilroy', Arial, sans-serif
+  font-weight: 600
+
+.header
+  @include flex-center
+  justify-content: space-between
+  padding: 10px 50px
+  position: absolute
+  width: 100%
+  z-index: 10
+
+  img
+    width: 200px
+
+  .nav-links, .nav-links a
+    @include flex-center-vert
+
+  .nav-links
+    gap: 56px
+
+    a
+      color: white
+      text-decoration: none
+      gap: 10px
+
+    img
+      width: 10px
+
+  .lang-selector
+    @include box(40px, 40px)
+    @include button(white, #000, 0px, 50%)
+    @include flex-center
+
+    span
+      color: $grey
+
+  .burger_menu
+    display: none
+    flex-direction: column
+    justify-content: center
+    cursor: pointer
+    align-items: center
+    background: rgba(0,0,0,0.20)
+    border-radius: 3px
+    padding: 8px
+    gap: 5px
+
+    div
+      @include box(30px, 4px)
+      border-radius: 5px
+      background: white
+
+.hero
+  @include flex-center-horiz
+  position: relative
+  width: 100%
+  min-height: 100vh
+  align-items: flex-end
+
+  .background-image
+    @include box(100%, 100%)
+    position: absolute
+    object-fit: cover
+    top: 0
+    left: 0
+    z-index: 1
+
+.hero-content
+    @include flex-center-vert
+    position: relative
+    z-index: 15
+    padding: 0 60px 60px 60px
+    width: 100%
+    justify-content: space-between
+    color: white
+
+    .text-left
+      max-width: 50%
+
+      p
+        font-size: 1.2rem
+        padding-bottom: 15px
+
+      h1
+        font-size: 150px
+        line-height: 100%
+
+    .text-right
+      max-width: 40%
+      @include flex-column
+      align-items: flex-end
+
+      p
+        font-size: 42px
+        text-align: right
+        max-width: 515px
+
+        span
+          color: $yellow
+
+
+.select_btn
+  @include button($yellow, $grey, (12px 62px), 50px)
+  font-size: 16px
+  margin-top: 40px
+  border: none
+
+.projects-section
+  background-color: $blue
+  overflow-x: hidden
+  text-align: center
+
+  .projects-gallery-container
+    padding-left: 68px
+
+  h2
+    color: white
+    margin-right: 300px
+    font-size: 220px
+    margin-bottom: 30px
+    position: relative
+    top: 117px
+    z-index: 5
+
+  .projects-gallery
+    display: flex
+    gap: 40px
+
+    .project-card
+      position: relative
+      min-width: 665px
+      height: 700px
+
+      img
+        display: block
+        height: 700px
+        object-fit: cover
+
+      .project-info
+        @include flex-center-vert
+        position: absolute
+        bottom: 0
+        width: 100%
+        padding: 50px
+        color: white
+        justify-content: space-between
+
+        &-container
+          @include  flex-column
+          align-items: flex-start
+          gap: 10px
+
+        .project-info_btn
+          @include box(65px, 65px)
+          @include flex-center
+          background: $yellow
+          color: white
+          border: none
+          cursor: pointer
+
+          img
+            @include box(24px, 24px)
+
+        p
+          font-size: 48px
+
+        small
+          font-size: 12px
+          font-weight: bold
+          text-transform: uppercase
+
+  .carousel-controls
+    margin-top: 20px
+    display: flex
+    justify-content: flex-start
+    gap: 20px
+
+    button
+      @include button(white, #000, 0px, 50%)
+      @include box(70px, 70px)
+      @include flex-center
+      font-size: 1.5rem
+      cursor: pointer
+
+      img
+        width: 25px
+
+.about-section
+  @include flex-center-column
+  background-color: $blue
+  padding: 50px 20px
+  position: relative
+
+  &-container
+    @include flex-center-column
+  p
+    max-width: 910px
+    font-size: 40px
+    color: $grey
+    z-index: 15
+
+  p, span
+    font-weight: 600
+    line-height: 40px
+
+  h2
+    font-size: 140px
+    color: white
+    z-index: 15
+    position: relative
+    top: 150px
+
+  span
+    color: white
+
+footer
+  position: relative
+  overflow: hidden
+
+.overlay
+  top: -100%
+  position: absolute
+
+.hero-right-img
+  position: absolute
+  right: 0
+  z-index: 5
+
+
+/* MEDIA QUERY */
+
+@import "media"
